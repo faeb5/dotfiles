@@ -1,0 +1,9 @@
+if [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "awesome" ]; then
+    [ -z `pidof -s picom` ] && picom -b
+    [ -z `pidof -s lxpolkit` ] && lxpolkit &
+    [ -z `pidof -s unclutter` ] && unclutter &
+    [ -z `pgrep blueman-applet` ] && blueman-applet &
+    [ -z `pidof -s redshift` ] && redshift -l 48.21:16.36 -t 5700:3600 -m randr &
+    [ -z `pidof -s urxvtd` ] && urxvtd -q -f -o
+fi
+
