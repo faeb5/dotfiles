@@ -11,21 +11,21 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "monospace 14"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
+theme.bg_normal     = "#1e1e2e"
+theme.bg_focus      = "#575268"
+theme.bg_urgent     = "#f28fad"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
+theme.fg_normal     = "#d9e0ee"
+theme.fg_focus      = "#d9e0ee"
+theme.fg_urgent     = "#1e1e2e"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
+theme.border_width  = dpi(2)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
@@ -51,6 +51,7 @@ theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
     taglist_square_size, theme.fg_normal
 )
+theme.taglist_spacing = 2
 
 -- Variables set for theming notifications:
 -- notification_font
@@ -62,8 +63,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
-theme.menu_height = dpi(15)
-theme.menu_width  = dpi(100)
+theme.menu_height = dpi(30)
+theme.menu_width  = dpi(200)
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -97,7 +98,8 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = themes_path.."default/background.png"
+
+theme.wallpaper = os.getenv("HOME") .. "/Pictures/wallpapers/wallpaper-05.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
